@@ -39,21 +39,46 @@ header h1 {
   } 
 } 
 /*THIS IS THE CODE FOR THE NAVIGATION BAR*/ 
-nav { 
+nav {
   font-family: 'Roboto', sans-serif;
-  flex-wrap: nowrap; 
-  overflow-x: auto; 
-  position: fixed; 
-  top: 0;  
-  left: 0; 
-  right: 0; 
-  background-color: #333; 
-  color: #fff; 
-  display: flex; 
-  justify-content: space-between; 
-  padding: 10px 15px; 
-  z-index: 1; 
-} 
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  z-index: 1;
+}
+
+/* Styles for small screens (less than 768px) */
+@media (max-width: 767px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    margin-bottom: 10px;
+  }
+}
+
+/* Styles for medium screens (between 768px and 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    flex-wrap: wrap;
+  }
+  nav a {
+    flex: 1 0 50%;
+  }
+}
+
+/* Styles for large screens (greater than 1023px) */
+@media (min-width: 1024px) {
+  nav {
+    flex-wrap: nowrap;
+  }
+  nav a {
+    flex: 1 0 auto;
+  }
+}
 /*THIS IS THE CODE FOR THE HOME PAGE (INDEX)*/ 
 .welcome { 
   display: flex; 
